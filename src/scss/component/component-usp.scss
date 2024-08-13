@@ -67,3 +67,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .usp{
+    .is-grid{
+      grid-template-columns: 1fr;
+    }
+    .usp__link, .usp__wrapper{
+      display: grid;
+    }
+    .usp__icon{
+      order: 3;
+    }
+  } 
+}

@@ -104,7 +104,7 @@
         // reset the extra space for __image element, extra space is covered via the .two-column-info-block element
         margin-bottom: 0;
       }
-      figure {
+      figure:not(.section-five figure) {
         position: relative;
         z-index: 2;
         border-radius: var(--border-radius);
@@ -133,8 +133,25 @@
         }
       }
     }
+    // .section-five div:nth-of-type(2){
+    //   @include mqmax($bp-md) {
+    //     margin-bottom: 0;
+    //   }
+    // }
   }
 }
+
+.section-five div:nth-of-type(2){
+  grid-column-end: span 13;
+}
+
+@media (max-width: 768px) {
+  .section-five div:nth-of-type(2){
+    margin-bottom: 0;
+    grid-column-end: span 13;
+  }
+}
+
 
 // set stoov heatwave colors with a key and value
 $heatwave-colors: (
